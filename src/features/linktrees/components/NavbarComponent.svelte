@@ -122,7 +122,7 @@
         </div>
         <ChevronDown
           size={16}
-          class="text-slate-400 transition-transform duration-200 {dropdownOpen
+          class="text-slate-500 transition-transform duration-200 {dropdownOpen
             ? 'rotate-180'
             : ''}"
         />
@@ -157,7 +157,7 @@
               on:click={handleLogoutClick}
               class="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-red-600 rounded-xl hover:bg-red-50 transition-colors text-left"
             >
-              <LogOut size={18} class="text-red-500" />
+              <LogOut size={18} class="text-red-700" />
               Keluar
             </button>
           </div>

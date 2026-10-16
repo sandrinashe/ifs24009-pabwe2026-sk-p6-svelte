@@ -3,7 +3,7 @@
   import { CircleQuestionMark, ArrowLeft, House } from "lucide-svelte";
 </script>
 
-<div class="min-h-screen bg-slate-50 flex items-center justify-center p-4">
+<main class="min-h-screen bg-slate-50 flex items-center justify-center p-4">
   <div class="max-w-md w-full text-center space-y-6 bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-100">
     <div class="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mx-auto shadow-inner">
       <CircleQuestionMark size={36} strokeWidth={2.5} />
@@ -39,4 +39,4 @@
       </button>
     </div>
   </div>
-</div>
+</main>

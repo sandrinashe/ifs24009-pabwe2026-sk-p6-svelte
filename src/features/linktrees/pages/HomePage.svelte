@@ -151,8 +151,8 @@
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
       <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs flex items-center justify-between">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Total Link Tree</p>
-          <h3 data-testid="stat-total" class="text-3xl font-black text-slate-800 mt-1">{totalCount}</h3>
+          <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">Total Link Tree</p>
+          <h2 data-testid="stat-total" class="text-3xl font-black text-slate-800 mt-1">{totalCount}</h2>
         </div>
         <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center">
           <Layers size={26} strokeWidth={2} />
@@ -161,20 +161,20 @@
 
       <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs flex items-center justify-between">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Milik Saya</p>
-          <h3 data-testid="stat-mine" class="text-3xl font-black text-emerald-600 mt-1">{mineCount}</h3>
+          <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">Milik Saya</p>
+          <h2 data-testid="stat-mine" class="text-3xl font-black text-emerald-700 mt-1">{mineCount}</h2>
         </div>
-        <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+        <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center">
           <Globe size={26} strokeWidth={2} />
         </div>
       </div>
 
       <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs flex items-center justify-between">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Total Tautan</p>
-          <h3 data-testid="stat-links" class="text-3xl font-black text-amber-600 mt-1">{totalLinks}</h3>
+          <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">Total Tautan</p>
+          <h2 data-testid="stat-links" class="text-3xl font-black text-amber-700 mt-1">{totalLinks}</h2>
         </div>
-        <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center">
+        <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center">
           <Link size={26} strokeWidth={2} />
         </div>
       </div>
@@ -184,7 +184,7 @@
     <div class="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden">
       <div class="p-4 sm:p-5 border-b border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div class="relative flex-1 max-w-md">
-          <Search size={18} class="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
+          <Search size={18} class="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
           <input
             type="text"
             data-testid="search-link-tree-input"
@@ -222,12 +222,12 @@
       <!-- Grid -->
       <div class="p-4 sm:p-5">
         {#if loading && filteredLinkTrees.length === 0}
-          <div class="px-6 py-12 text-center text-slate-400">
+          <div class="px-6 py-12 text-center text-slate-500">
             <LoaderCircle size={36} class="mx-auto text-indigo-600 animate-spin mb-2" />
             <p class="font-medium text-slate-600">Memuat daftar link tree...</p>
           </div>
         {:else if filteredLinkTrees.length === 0}
-          <div class="px-6 py-12 text-center text-slate-400">
+          <div class="px-6 py-12 text-center text-slate-500">
             <Link size={40} class="mx-auto text-slate-300 mb-2" />
             <p class="font-medium">Belum ada link tree yang cocok.</p>
           </div>
@@ -250,9 +250,9 @@
                 </div>
 
                 <div class="flex-1 p-5 space-y-2">
-                  <h3 class="font-bold text-slate-800 leading-snug line-clamp-1">{linkTree.title}</h3>
+                  <h2 class="font-bold text-slate-800 leading-snug line-clamp-1">{linkTree.title}</h2>
                   <p class="text-sm text-slate-500 line-clamp-2">{linkTree.description}</p>
-                  <div class="flex items-center gap-2 pt-1 text-xs text-slate-400">
+                  <div class="flex items-center gap-2 pt-1 text-xs text-slate-500">
                     <span class="font-semibold text-slate-500">{linkTree.author.name}</span>
                     <span>&middot;</span>
                     <span>{linkTree.total_links} tautan</span>
@@ -276,7 +276,7 @@
                       type="button"
                       data-testid={`edit-link-tree-${linkTree.id}`}
                       on:click={() => handleEdit(linkTree)}
-                      class="p-1.5 text-slate-600 hover:text-amber-600 hover:bg-amber-50 rounded-lg transition-colors"
+                      class="p-1.5 text-slate-600 hover:text-amber-700 hover:bg-amber-50 rounded-lg transition-colors"
                       title="Ubah Link Tree"
                     >
                       <Pencil size={18} />

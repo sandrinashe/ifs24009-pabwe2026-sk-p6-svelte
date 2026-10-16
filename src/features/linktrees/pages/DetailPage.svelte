@@ -182,7 +182,7 @@
             <span>Oleh <strong class="text-slate-700">{linkTree.author.name}</strong></span>
           </div>
 
-          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-500">
             <div class="flex items-center gap-1.5">
               <Calendar size={14} class="shrink-0" />
               <span>Dibuat: <strong class="text-slate-500">{formatDate(linkTree.created_at)}</strong></span>
@@ -205,7 +205,7 @@
             <h2 class="text-lg font-bold text-slate-800 flex items-center gap-2">
               <Link size={18} class="text-indigo-600" />
               Daftar Tautan
-              <span data-testid="items-count" class="text-xs font-semibold text-slate-400">({items.length})</span>
+              <span data-testid="items-count" class="text-xs font-semibold text-slate-500">({items.length})</span>
             </h2>
             {#if isOwner}
               <button
@@ -221,7 +221,7 @@
           </div>
 
           {#if items.length === 0}
-            <p data-testid="items-empty" class="text-sm italic text-slate-400 py-6 text-center border border-dashed border-slate-200 rounded-2xl">
+            <p data-testid="items-empty" class="text-sm italic text-slate-500 py-6 text-center border border-dashed border-slate-200 rounded-2xl">
               Belum ada tautan pada link tree ini.
             </p>
           {:else}
@@ -243,7 +243,7 @@
                     </span>
                     <span class="min-w-0">
                       <span class="block font-semibold text-slate-800 truncate">{item.title}</span>
-                      <span class="block text-xs text-slate-400 truncate">{item.url}</span>
+                      <span class="block text-xs text-slate-500 truncate">{item.url}</span>
                     </span>
                   </a>
                   {#if isOwner}
@@ -252,7 +252,7 @@
                         type="button"
                         data-testid={`edit-item-${item.id}`}
                         on:click={() => openEditItem(item)}
-                        class="p-1.5 text-slate-500 hover:text-amber-600 hover:bg-amber-50 rounded-lg transition-colors"
+                        class="p-1.5 text-slate-500 hover:text-amber-700 hover:bg-amber-50 rounded-lg transition-colors"
                         title="Ubah Tautan"
                       >
                         <Pencil size={16} />
